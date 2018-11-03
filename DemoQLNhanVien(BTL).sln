@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNhanVien", "QLNhanVien\QLNhanVien.csproj", "{7993EF84-164C-4C5A-8CD7-ED28B519ED91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoQLNhanVien(BTL)", "DemoQLNhanVien(BTL).csproj", "{B7FA6B7F-9466-4836-84A0-606C53D8C509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7993EF84-164C-4C5A-8CD7-ED28B519ED91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7993EF84-164C-4C5A-8CD7-ED28B519ED91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7993EF84-164C-4C5A-8CD7-ED28B519ED91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7993EF84-164C-4C5A-8CD7-ED28B519ED91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7FA6B7F-9466-4836-84A0-606C53D8C509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7FA6B7F-9466-4836-84A0-606C53D8C509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7FA6B7F-9466-4836-84A0-606C53D8C509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7FA6B7F-9466-4836-84A0-606C53D8C509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

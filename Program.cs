@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanVien
+namespace DemoQLNhanVien_BTL_
 {
     static class Program
     {
@@ -16,11 +16,7 @@ namespace QLNhanVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frm_Login frm = new frm_Login();
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                Application.Run(new Form2());
-            }
+            Application.Run(new FrmLogin());
         }
     }
 }
