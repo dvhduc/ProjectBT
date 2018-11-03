@@ -19,11 +19,11 @@ namespace DemoQLNhanVien_BTL_
         }
         public QLNV(string id, string name, string address, string phone, string position)
         {
-            ID = id;
-            Name = name;
-            Address = address;
-            Phone = phone;
-            Position = position;
+            this.ID = id;
+            this.Name = name;
+            this.Address = address;
+            this.Phone = phone;
+            this.Position = position;
         }
         public const int luong = 200000;
         public abstract double TinhTienLuong(int soNgayLam);
