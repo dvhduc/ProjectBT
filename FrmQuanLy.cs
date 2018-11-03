@@ -25,6 +25,7 @@ namespace DemoQLNhanVien_BTL_
         private void FrmQuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();  
-        }   
+        }
+        
     }
 }
