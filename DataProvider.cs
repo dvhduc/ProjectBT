@@ -36,7 +36,7 @@ namespace DemoQLNhanVien_BTL_
             SqlConnection cn = new SqlConnection(cnStr);
             cn.Open();
 
-            string sql = "SELECT Type FROM Users WHERE Username = '" + username + "' AND Password = '" + password + "'";
+            string sql = "SELECT * FROM Users WHERE Username = '" + username + "' AND Password = '" + password + "'";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
             cmd.CommandText = sql;
