@@ -31,7 +31,7 @@ namespace DemoQLNhanVien_BTL_
                 string password = txtPass.Text;
                 if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password)) // xét thử rỗng với trống không 
                 {
-                    MessageBox.Show("Yêu cầu thông tin chưa đầy đủ ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Yêu cầu thông tin chưa đầy đủ.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
