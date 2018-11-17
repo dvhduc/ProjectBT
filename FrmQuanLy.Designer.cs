@@ -79,8 +79,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1147, 543);
-            this.splitContainer1.SplitterDistance = 168;
+            this.splitContainer1.Size = new System.Drawing.Size(1078, 509);
+            this.splitContainer1.SplitterDistance = 158;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -97,8 +97,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvDanhSachQL);
-            this.splitContainer2.Size = new System.Drawing.Size(975, 543);
-            this.splitContainer2.SplitterDistance = 248;
+            this.splitContainer2.Size = new System.Drawing.Size(916, 509);
+            this.splitContainer2.SplitterDistance = 233;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -130,8 +130,8 @@
             this.splitContainer3.Panel2.Controls.Add(this.txtAddress);
             this.splitContainer3.Panel2.Controls.Add(this.txtName);
             this.splitContainer3.Panel2.Controls.Add(this.txtID);
-            this.splitContainer3.Size = new System.Drawing.Size(975, 248);
-            this.splitContainer3.SplitterDistance = 38;
+            this.splitContainer3.Size = new System.Drawing.Size(916, 233);
+            this.splitContainer3.SplitterDistance = 36;
             this.splitContainer3.TabIndex = 0;
             // 
             // btnCalculator
@@ -290,7 +290,7 @@
             this.dgvDanhSachQL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachQL.Location = new System.Drawing.Point(0, 0);
             this.dgvDanhSachQL.Name = "dgvDanhSachQL";
-            this.dgvDanhSachQL.Size = new System.Drawing.Size(975, 291);
+            this.dgvDanhSachQL.Size = new System.Drawing.Size(916, 272);
             this.dgvDanhSachQL.TabIndex = 0;
             this.dgvDanhSachQL.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachQL_CellContentClick);
             this.dgvDanhSachQL.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDanhSachQL_CellMouseClick);
@@ -352,7 +352,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 543);
+            this.ClientSize = new System.Drawing.Size(1078, 509);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmQuanLy";
             this.Text = "Quản Lý";
