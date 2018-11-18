@@ -47,19 +47,21 @@ namespace DemoQLNhanVien_BTL_
                
                 if (row >= 0 && row < dgvDanhSach.Rows.Count)
                 {
+
                     DialogResult result = MessageBox.Show("Bạn Có muốn xóa", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (result == DialogResult.OK)
                     {
                         cng.Del(row,cng.memberTable);
                     }
+
                 }
             }
-            Update();
+            cng.Update(cng.memberTable);
         }
 
         private void FrmGiamDoc_Load(object sender, EventArgs e)//pass
         {
-            string cnStr = "Server =TrungHieuIT\\SQLEXPRESS; Database = EE; Integrated security = true ;";
+            string cnStr = "Server =DESKTOP-7AHBV06\\SQLEXPRESS; Database =QLNV; Integrated security = true ;";
             cng.cn = new SqlConnection(cnStr);
             DataSet ds = cng.GetData();
             cng.memberTable = ds.Tables[0];
