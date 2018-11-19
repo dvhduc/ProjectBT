@@ -14,7 +14,7 @@ namespace UnitTestProject1
         private DataProvider daP;
         private ChucNang cn;
         private DataSet ds;
-       // private DataTable daT;
+        // private DataTable daT;
         [TestInitialize]
         public void SetUp()
         {
@@ -22,8 +22,9 @@ namespace UnitTestProject1
             cn = new ChucNang();
             ds = cn.GetData();
         }
+
         [TestMethod]
-        public void TestLogin1()
+        public void TestLoginGiamDoc()
         {
             SetUp();
             bool expected = true;
@@ -38,13 +39,28 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void TestLogin2()
+        public void TestLoginQuanLy()
+        {
+            SetUp();
+            bool expected = true;
+            bool actual = true;
+            string user = "Client";
+            string pass = "QuanLy";
+            if (daP.Login(user, pass) == true)
+            {
+                actual = true;
+            }
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void TestLoginNullID()
         {
             SetUp();
             bool expected = false;
 
             string user = " ";
-            string pass = "sâsa";
+            string pass = "sasa";
             bool actual = true;
             if (daP.Login(user, pass) == false)
             {
@@ -52,19 +68,115 @@ namespace UnitTestProject1
 
             }
             Assert.AreEqual(expected, actual);
+
         }
+        [TestMethod]
+        public void TestLoginNullPass()
+        {
+            SetUp();
+            bool expected = false;
+
+            string user = "Admin";
+            string pass = " ";
+            bool actual = true;
+            if (daP.Login(user, pass) == false)
+            {
+                actual = false;
+
+            }
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void TestLoginEmpty()
+        {
+            SetUp();
+            bool expected = false;
+
+            string user = " ";
+            string pass = " ";
+            bool actual = true;
+            if (daP.Login(user, pass) == false)
+            {
+                actual = false;
+
+            }
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
+
         [TestMethod]
         public void TestThem()
         {
             SetUp();
             DataTable daTt = ds.Tables[0];
             Assert.AreEqual(0, daTt.Rows.Count);
-            cn.Them(daTt, "123", "Nguyen Van A", "acb", "0123", "Nhân Viên");
+            cn.Them(daTt, "123", "Nguyen Van A", "31 NK", "0123465789", "Nhân Viên");
             Assert.AreEqual(1, daTt.Rows.Count);
-           
+
         }
         [TestMethod]
-        public void TestSua()
+        public void TestThemNullID()
+        {
+            SetUp();
+            DataTable daTt = ds.Tables[0];
+            Assert.AreEqual(0, daTt.Rows.Count);
+            cn.Them(daTt, " ", "Nguyen Van A", "31 NK", "0123465789", "Nhan Vien");
+            Assert.AreEqual(1, daTt.Rows.Count);
+        }
+
+        [TestMethod]
+        public void TestThemNullHoTen()
+        {
+            SetUp();
+            DataTable daTt = ds.Tables[0];
+            Assert.AreEqual(0, daTt.Rows.Count);
+            cn.Them(daTt, "123", " ", "31 NK", "0123465789", "Nhan Vien");
+            Assert.AreEqual(1, daTt.Rows.Count);
+        }
+        [TestMethod]
+        public void TestThemNullDiaChi()
+        {
+            SetUp();
+            DataTable daTt = ds.Tables[0];
+            Assert.AreEqual(0, daTt.Rows.Count);
+            cn.Them(daTt, "123", "Nguyen Van A", " ", "0123465789", "Nhan Vien");
+            Assert.AreEqual(1, daTt.Rows.Count);
+        }
+
+        [TestMethod]
+        public void TestThemNullSDT()
+        {
+            SetUp();
+            DataTable daTt = ds.Tables[0];
+            Assert.AreEqual(0, daTt.Rows.Count);
+            cn.Them(daTt, "123", "Nguyen Van A", "31 NK", " ", "Nhan Vien");
+            Assert.AreEqual(1, daTt.Rows.Count);
+        }
+        [TestMethod]
+        public void TestThemNullChucVu()
+        {
+            SetUp();
+            DataTable daTt = ds.Tables[0];
+            Assert.AreEqual(0, daTt.Rows.Count);
+            cn.Them(daTt, "123", "Nguyen Van A", "31 NK", "0123465789", " ");
+            Assert.AreEqual(1, daTt.Rows.Count);
+        }
+        [TestMethod]
+        public void TestThemEmpty()
+        {
+            SetUp();
+            DataTable daTt = ds.Tables[0];
+            Assert.AreEqual(0, daTt.Rows.Count);
+            cn.Them(daTt, " ", " ", " ", " ", " ");
+            Assert.AreEqual(1, daTt.Rows.Count);
+        }
+
+
+        [TestMethod]
+        public void TestSuaID()
         {
             SetUp();
             DataTable daTs = ds.Tables[0];
@@ -73,6 +185,51 @@ namespace UnitTestProject1
 
             cn.Sua(daTs.Rows[0], gd);
             Assert.AreEqual("12", daTs.Rows[0][0]);
+        }
+        [TestMethod]
+        public void TestSuaHoTen()
+        {
+            SetUp();
+            DataTable daTs = ds.Tables[0];
+            cn.Them(daTs, "123", "Nguyen Van A", "acb", "0123", "Nhân Viên");
+            GiamDoc gd = new GiamDoc("123", "Nguyen Van B", "acb", "0123", "Nhân Viên");
+
+            cn.Sua(daTs.Rows[0], gd);
+            Assert.AreEqual("Nguyen Van B", daTs.Rows[0][1]);
+        }
+
+
+        [TestMethod]
+        public void TestSuaDiaChi()
+        {
+            SetUp();
+            DataTable daTs = ds.Tables[0];
+            cn.Them(daTs, "123", "Nguyen Van A", "acb", "0123", "Nhân Viên");
+            GiamDoc gd = new GiamDoc("123", "Nguyen Van A", "3711 NK", "0123", "Nhân Viên");
+            cn.Sua(daTs.Rows[0], gd);
+            Assert.AreEqual("3711 NK", daTs.Rows[0][2]);
+        }
+
+        [TestMethod]
+        public void TestSuaSDT()
+        {
+            SetUp();
+            DataTable daTs = ds.Tables[0];
+            cn.Them(daTs, "123", "Nguyen Van A", "acb", "0123", "Nhân Viên");
+            GiamDoc gd = new GiamDoc("123", "Nguyen Van A", "3711 NK", "0123456789", "Nhân Viên");
+            cn.Sua(daTs.Rows[0], gd);
+            Assert.AreEqual("0123456789", daTs.Rows[0][3]);
+        }
+
+        [TestMethod]
+        public void TestSuaChucVu()
+        {
+            SetUp();
+            DataTable daTs = ds.Tables[0];
+            cn.Them(daTs, "123", "Nguyen Van A", "acb", "0123", "Nhân Viên");
+            GiamDoc gd = new GiamDoc("123", "Nguyen Van A", "3711 NK", "0123456789", "Giam Doc");
+            cn.Sua(daTs.Rows[0], gd);
+            Assert.AreEqual("Giam Doc", daTs.Rows[0][4]);
         }
         [TestMethod]
         public void TestXoa()
@@ -103,9 +260,8 @@ namespace UnitTestProject1
             cn.Del(0, daTa);
             cn.Del(0, daTa);
             cn.Del(0, daTa);
-
         }
 
-
+        }
     }
-}
+
