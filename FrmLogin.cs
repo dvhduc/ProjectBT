@@ -61,6 +61,7 @@ namespace DemoQLNhanVien_BTL_
                         DialogResult result = MessageBox.Show("UserName hoặc Password không đúng !", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                         if (result == DialogResult.Cancel)
                         {
+                            
                             Application.Exit();
                         }
                         else
@@ -70,6 +71,14 @@ namespace DemoQLNhanVien_BTL_
                     }
                 }
             }
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult = MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            if(DialogResult == DialogResult.Yes)
+                Application.Exit();
 
         }
     }

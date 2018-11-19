@@ -61,7 +61,10 @@ namespace DemoQLNhanVien_BTL_
 
         private void FrmGiamDoc_Load(object sender, EventArgs e)//pass
         {
-            string cnStr = "Server =DESKTOP-7AHBV06\\SQLEXPRESS; Database =QLNV; Integrated security = true ;";
+
+
+            string cnStr = "Server =TrungHieuIT\\SQLEXPRESS; Database =EE; Integrated security = true ;";
+
             cng.cn = new SqlConnection(cnStr);
             DataSet ds = cng.GetData();
             cng.memberTable = ds.Tables[0];
@@ -104,11 +107,14 @@ namespace DemoQLNhanVien_BTL_
 
         private void btnCalculator_Click(object sender, EventArgs e) // pass
         {
-            //int a = Convert.ToInt32(txtDay.Text);
+            int a = Convert.ToInt32(txtDay.Text);
             int chon = 0;
             ChucNang cng = new ChucNang();
             double kq = 0;
+
+            
             if (cmbPosition.Text == "Giám Ðốc")
+
             {
                 chon = 1;
                 kq = cng.TinhLuong(a, chon);
