@@ -21,7 +21,9 @@ namespace DemoQLNhanVien_BTL_
         ChucNang cng = new ChucNang();
         private void FrmQuanLy_Load(object sender, EventArgs e)
         {
-            string cnStr = "Server =TrungHieuIT\\SQLEXPRESS; Database = EE; Integrated security = true ;";
+
+            string cnStr = "Server = PC\\SQLEXPRESS; Database =EE; Integrated security = true ;";
+
             cng.cn = new SqlConnection(cnStr);
             DataSet ds = cng.GetData();
             cng.memberTable = ds.Tables[0];
@@ -143,6 +145,14 @@ namespace DemoQLNhanVien_BTL_
 
 
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            cng.Update(cng.memberTable);
+            MessageBox.Show("Cập nhập thành công ", "Cập Nhập");
+            txtID.Text = txtDay.Text = txtName.Text = txtAddress.Text = txtPhone.Text = cmbPosition.Text = "";
+            txtID.Focus();
         }
     }
 }

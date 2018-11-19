@@ -47,19 +47,24 @@ namespace DemoQLNhanVien_BTL_
                
                 if (row >= 0 && row < dgvDanhSach.Rows.Count)
                 {
+
                     DialogResult result = MessageBox.Show("Bạn Có muốn xóa", "Xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (result == DialogResult.OK)
                     {
                         cng.Del(row,cng.memberTable);
                     }
+
                 }
             }
-            Update();
+            cng.Update(cng.memberTable);
         }
 
         private void FrmGiamDoc_Load(object sender, EventArgs e)//pass
         {
-            string cnStr = "Server =TrungHieuIT\\SQLEXPRESS; Database = EE; Integrated security = true ;";
+
+
+            string cnStr = "Server =TrungHieuIT\\SQLEXPRESS; Database =EE; Integrated security = true ;";
+
             cng.cn = new SqlConnection(cnStr);
             DataSet ds = cng.GetData();
             cng.memberTable = ds.Tables[0];
@@ -106,7 +111,10 @@ namespace DemoQLNhanVien_BTL_
             int chon = 0;
             ChucNang cng = new ChucNang();
             double kq = 0;
+
+            
             if (cmbPosition.Text == "Giám Ðốc")
+
             {
                 chon = 1;
                 kq = cng.TinhLuong(a, chon);
