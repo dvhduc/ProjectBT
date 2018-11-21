@@ -154,5 +154,7 @@ namespace DemoQLNhanVien_BTL_
             txtID.Text = txtDay.Text = txtName.Text = txtAddress.Text = txtPhone.Text = cmbPosition.Text = "";
             txtID.Focus();
         }
+
+        
     }
 }

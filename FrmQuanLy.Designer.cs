@@ -78,7 +78,8 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackgroundImage = global::DemoQLNhanVien_BTL_.Properties.Resources.panel_QuanLy;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            //this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -114,7 +115,7 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.BackgroundImage = global::DemoQLNhanVien_BTL_.Properties.Resources.milky_way_starry_sky_night_sky_star_956999;
+            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.PeachPuff;
             this.splitContainer3.Panel1.Controls.Add(this.btnCalculator);
             this.splitContainer3.Panel1.Controls.Add(this.btnUpdate);
             this.splitContainer3.Panel1.Controls.Add(this.btnChange);
@@ -123,6 +124,7 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.Color.Coral;
             this.splitContainer3.Panel2.Controls.Add(this.txtDay);
             this.splitContainer3.Panel2.Controls.Add(this.lbSoNgayLam);
             this.splitContainer3.Panel2.Controls.Add(this.cmbPosition);
@@ -135,6 +137,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.txtAddress);
             this.splitContainer3.Panel2.Controls.Add(this.txtName);
             this.splitContainer3.Panel2.Controls.Add(this.txtID);
+            this.splitContainer3.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer3.Size = new System.Drawing.Size(1041, 279);
             this.splitContainer3.SplitterDistance = 43;
             this.splitContainer3.TabIndex = 0;
@@ -201,10 +204,11 @@
             // lbSoNgayLam
             // 
             this.lbSoNgayLam.AutoSize = true;
+            this.lbSoNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoNgayLam.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lbSoNgayLam.Location = new System.Drawing.Point(364, 124);
             this.lbSoNgayLam.Name = "lbSoNgayLam";
-            this.lbSoNgayLam.Size = new System.Drawing.Size(79, 13);
+            this.lbSoNgayLam.Size = new System.Drawing.Size(92, 13);
             this.lbSoNgayLam.TabIndex = 3;
             this.lbSoNgayLam.Text = "Ngày Làm Việc";
             // 
@@ -224,10 +228,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label5.Location = new System.Drawing.Point(364, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "SĐT";
             // 
@@ -246,10 +251,11 @@
             // lbChucVu
             // 
             this.lbChucVu.AutoSize = true;
+            this.lbChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChucVu.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lbChucVu.Location = new System.Drawing.Point(25, 124);
             this.lbChucVu.Name = "lbChucVu";
-            this.lbChucVu.Size = new System.Drawing.Size(48, 13);
+            this.lbChucVu.Size = new System.Drawing.Size(55, 13);
             this.lbChucVu.TabIndex = 1;
             this.lbChucVu.Text = "Chức Vụ";
             // 
@@ -307,6 +313,7 @@
             // 
             // dgvDanhSachQL
             // 
+            this.dgvDanhSachQL.BackgroundColor = System.Drawing.Color.Coral;
             this.dgvDanhSachQL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachQL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,

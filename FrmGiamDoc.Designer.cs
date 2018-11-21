@@ -78,7 +78,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackgroundImage = global::DemoQLNhanVien_BTL_.Properties.Resources.Panel_GiamDoc2;
+            this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer1.Panel2
             // 
@@ -114,7 +114,6 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.BackgroundImage = global::DemoQLNhanVien_BTL_.Properties.Resources.milky_way_starry_sky_night_sky_star_956999;
             this.splitContainer3.Panel1.Controls.Add(this.btnCalculator);
             this.splitContainer3.Panel1.Controls.Add(this.btnUpdate);
             this.splitContainer3.Panel1.Controls.Add(this.btnChange);
@@ -122,7 +121,6 @@
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.BackgroundImage = global::DemoQLNhanVien_BTL_.Properties.Resources.milky_way_starry_sky_night_sky_star_956999;
             this.splitContainer3.Panel2.Controls.Add(this.cmbPosition);
             this.splitContainer3.Panel2.Controls.Add(this.txtDay);
             this.splitContainer3.Panel2.Controls.Add(this.lbSoNgayLam);
@@ -220,7 +218,7 @@
             this.lbSoNgayLam.AutoSize = true;
             this.lbSoNgayLam.BackColor = System.Drawing.Color.Transparent;
             this.lbSoNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoNgayLam.ForeColor = System.Drawing.Color.White;
+            this.lbSoNgayLam.ForeColor = System.Drawing.Color.Olive;
             this.lbSoNgayLam.Location = new System.Drawing.Point(393, 109);
             this.lbSoNgayLam.Name = "lbSoNgayLam";
             this.lbSoNgayLam.Size = new System.Drawing.Size(92, 13);
@@ -232,7 +230,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Olive;
             this.label5.Location = new System.Drawing.Point(29, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
@@ -243,7 +241,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Olive;
             this.label4.Location = new System.Drawing.Point(393, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 17);
@@ -261,7 +259,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Olive;
             this.label3.Location = new System.Drawing.Point(393, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
@@ -279,7 +277,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Olive;
             this.label2.Location = new System.Drawing.Point(29, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 17);
@@ -297,7 +295,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Olive;
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
@@ -314,7 +312,7 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.AllowUserToAddRows = false;
-            this.dgvDanhSach.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dgvDanhSach.BackgroundColor = System.Drawing.Color.Coral;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -390,6 +388,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 570);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmGiamDoc";
             this.Text = "Quản Lý Nhân Viên";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGiamDoc_FormClosing);
